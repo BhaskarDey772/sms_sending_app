@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFF9CA;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.links {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: red; */
+    border-bottom: 1px solid black;
 }
 
-.App-link {
-  color: #61dafb;
+.menuItemOne,
+.menuItemTwo {
+    padding: 1rem;
+    background-color: #B2A4FF;
+    margin: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFF9CA;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menuItemOne:hover,
+.menuItemTwo:hover {
+    transform: translate(0, -5px);
+}
+
+/* menuItemOne */
+
+/* .users {
+    height: 80vh;
+    width: 100vw;
+    padding-bottom: 2rem;
+} */
+
+.users ul {
+    max-width: 80%;
+    margin: 3rem auto;
+}
+
+.users ul li {
+    list-style-type: none;
+    padding: 2rem;
+    margin-block: 1rem;
+    background-color: #B2A4FF;
+    cursor: pointer;
+    color: #FFF9CA;
+    font-size: 1.5rem;
+}
+
+/* contact info */
+.contactButton {
+    padding: 1rem 3rem;
+    background-color: #B2A4FF;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: 0.2s ease-in-out;
+    border-radius: 10px;
+    color: #FFF9CA;
+}
+
+.contactButton:hover {
+    transform: translate(0, -5px);
+}
+
+/* message */
+
+
+.form {
+    display: flex;
+    align-items: center;
+    max-width: 80%;
+    margin: 3rem auto;
+    height: 10vh;
+}
+
+.form input {
+    padding: 1rem 3rem 1rem 1rem;
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    border: 1px solid transparent;
+}
+
+.form input:focus {
+    outline: none;
+    border: 1px solid #B2A4FF;
+}
+
+.sendButton {
+    padding: 1rem 3rem;
+    background-color: #B2A4FF;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    border-radius: 10px;
+    color: #FFF9CA;
+}
+
+.sendButton:hover {
+    transform: translate(0, -5px);
+}
+
+/* loader */
+.loader {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
