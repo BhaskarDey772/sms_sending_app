@@ -19,15 +19,15 @@ const Message = () => {
   const handleSubmit = async(e)=>{
     e.preventDefault()
     const response = await axios.post(
-      `https://api.twilio.com/2010-04-01/Accounts/${process.env.USERNAME}/Messages.json`,
+      `https://api.twilio.com/2010-04-01/Accounts/${process.env.REACT_APP_USERNAME}/Messages.json`,
       `Body=Hi, Your OTP is: ${otp}. ${value}&From=+18437382646&To=+91${selectedUser?.phoneNo}`,
       {
           headers: {
               'Content-Type': 'application/x-www-form-urlencoded'
           },
           auth: {
-              username: process.env.USERNAME ,
-              password: process.env.PASSWORD
+              username: process.env.REACT_APP_USERNAME ,
+              password: process.env.REACT_APP_PASSWORD
           }
       }
   ).then((res)=>res).catch((err)=>err);
